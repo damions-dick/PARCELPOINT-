@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Tracking Number</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function checkTrackingNumber() {
+      const input = document.getElementById('tracking').value;
+      if (input === 'DK8UFR0WXC') {
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid tracking number');
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded shadow space-y-4 w-full max-w-sm text-center">
+    <h1 class="text-xl font-bold text-yellow-500">Track Your Parcel</h1>
+    <input type="text" id="tracking" class="w-full p-2 border rounded" placeholder="Enter Tracking Number" />
+    <button onclick="checkTrackingNumber()" class="bg-yellow-400 text-white px-4 py-2 rounded hover:bg-yellow-500">Track</button>
+  </div>
+</body>
+</html>
